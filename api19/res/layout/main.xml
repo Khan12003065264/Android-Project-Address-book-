@@ -10,7 +10,7 @@
     <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Main was changed"
+            android:text="No main was not changed"
             android:textColor="#ffff0005"
             />
 
