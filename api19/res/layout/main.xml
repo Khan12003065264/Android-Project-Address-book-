@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background= "#ff000000"
+              android:id="@+id/mainTextView"
+    >
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="This is main activity."
+            android:textColor="#ffff0005"
+            />
+
+    <TabHost
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:id="@+id/myTab" android:layout_gravity="center_horizontal">
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+            <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+            </TabWidget>
+            <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                <LinearLayout
+                        android:id="@+id/tab1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <fragment android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:name="com.example.api19.MyFragment" android:id="@+id/fragment"
+                                  tools:layout="@layout/main"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:id="@+id/tab2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+                        <ListView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/myList"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:id="@+id/tab3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+                        <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="New RadioButton"
+                                android:id="@+id/radioButton" android:layout_gravity="center_horizontal"/>
+                        <Button
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="New Button"
+                                android:id="@+id/button" android:layout_gravity="right"/>
+                        <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="New CheckBox"
+                                android:id="@+id/checkBox"/>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</LinearLayout>
+
