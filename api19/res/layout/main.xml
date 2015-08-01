@@ -10,7 +10,7 @@
     <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="FUW"
+            android:text="fahad i love uhh"
             android:textColor="#ffff0005"
             />
 
@@ -38,7 +38,7 @@
 
                         <fragment android:layout_width="match_parent"
                                   android:layout_height="wrap_content"
-                                  android:name="com.example.api19.MyFragment" android:id="@+id/fragment"
+                                  android:name="com.example.api19.MyFragment" android:id="@+id/fragment1"
                                   tools:layout="@layout/main"/>
                 </LinearLayout>
                 <LinearLayout
@@ -46,32 +46,33 @@
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:orientation="vertical">
-                        <ListView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:id="@+id/myList"/>
+
+                        <fragment android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:name="com.example.api19.MyFragment2" android:id="@+id/fragment2"
+                                  tools:layout="@layout/main"/>
                 </LinearLayout>
                 <LinearLayout
                         android:id="@+id/tab3"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:orientation="vertical">
-                        <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="New RadioButton"
-                                android:id="@+id/radioButton" android:layout_gravity="center_horizontal"/>
-                        <Button
-                                style="?android:attr/buttonStyleSmall"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="New Button"
-                                android:id="@+id/button" android:layout_gravity="right"/>
-                        <CheckBox
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="New CheckBox"
-                                android:id="@+id/checkBox"/>
+
+                        <fragment android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:name="com.example.api19.MyFragment3" android:id="@+id/fragment3"
+                                  tools:layout="@layout/main"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:id="@+id/tab4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+
+                    <fragment android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:name="com.example.api19.MyFragment4" android:id="@+id/fragment4"
+                              tools:layout="@layout/main"/>
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>

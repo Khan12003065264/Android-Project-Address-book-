@@ -1,16 +1,8 @@
 package com.example.api19;
 
 import android.app.*;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
-import android.widget.ListView;
 import android.widget.TabHost;
-
-import java.util.ArrayList;
 
 public class MyActivity extends Activity{
     /**
@@ -28,29 +20,23 @@ public class MyActivity extends Activity{
         TabHost.TabSpec spec = mTabHost.newTabSpec("tab1");
         spec.setContent(R.id.tab1);
         //spec.setContent(new Intent().setClass(this, MyFragment.class));
-        spec.setIndicator("Contacts");
+        spec.setIndicator("Search");
         mTabHost.addTab(spec);
 
         spec = mTabHost.newTabSpec("tab2");
         spec.setContent(R.id.tab2);
-        spec.setIndicator("Search");
+        spec.setIndicator("Logs");
         mTabHost.addTab(spec);
 
         spec = mTabHost.newTabSpec("tab3");
         spec.setContent(R.id.tab3);
-        spec.setIndicator("Tab3");
+        spec.setIndicator("Favorites");
         mTabHost.addTab(spec);
 
-        ArrayList<String> listItems= new ArrayList<String>();
-        ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,listItems);
-        ListView myList= (ListView) findViewById(R.id.myList);
-        myList.setAdapter(adapter);
-        listItems.add("Fahad");
-        adapter.notifyDataSetChanged();
-        adapter.add("Hussain");
-        adapter.add("Khan");
-        for(int i=0; i<10; i++)
-            adapter.add("Item: "+(i+1));
+        spec = mTabHost.newTabSpec("tab4");
+        spec.setContent(R.id.tab4);
+        spec.setIndicator("Contacts");
+        mTabHost.addTab(spec);
 
         /*
         MyFragment frag= new MyFragment();
