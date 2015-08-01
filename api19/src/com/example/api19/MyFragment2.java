@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -20,7 +19,9 @@ public class MyFragment2 extends Fragment {
         View view = inflater.inflate(R.layout.fragment2, container, false);
 
         ListView myList= (ListView) view.findViewById(R.id.myList);
+        myList.setAdapter(new customAdapter(getActivity()));
 
+        /*
         ArrayList<String> listItems= new ArrayList<String>();
 
         ArrayAdapter<String> adapter=new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,listItems);
@@ -28,6 +29,8 @@ public class MyFragment2 extends Fragment {
 
         for(int i=0; i<10; i++)
             adapter.add("Item: "+(i+1));
+
+        */
 
         //adapter.notifyDataSetChanged();   //either change list and notify adapter
         return view;
