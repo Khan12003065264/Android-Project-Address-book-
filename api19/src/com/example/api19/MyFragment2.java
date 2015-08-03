@@ -19,7 +19,10 @@ public class MyFragment2 extends Fragment {
         View view = inflater.inflate(R.layout.fragment2, container, false);
 
         ListView myList= (ListView) view.findViewById(R.id.myList);
-        myList.setAdapter(new customAdapter(getActivity()));
+        customAdapter adapterView= new customAdapter(getActivity());
+        myList.setAdapter(adapterView);
+
+        adapterView.addContact(0,R.drawable.ic_launcher,"Usman","386");
 
         /*
         ArrayList<String> listItems= new ArrayList<String>();

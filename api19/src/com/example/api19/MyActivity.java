@@ -4,14 +4,22 @@ import android.app.*;
 import android.os.Bundle;
 import android.widget.TabHost;
 
+import java.util.ArrayList;
+
 public class MyActivity extends Activity{
     /**
      * Called when the activity is first created.
      */
+    static public ArrayList<ContactInfo> phoneBook= new ArrayList<ContactInfo>();
+    static Activity mainActivity;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
+        mainActivity=this;
+
         setContentView(R.layout.main);
 
         TabHost mTabHost = (TabHost)findViewById(R.id.myTab);
@@ -37,6 +45,11 @@ public class MyActivity extends Activity{
         spec.setContent(R.id.tab4);
         spec.setIndicator("Contacts");
         mTabHost.addTab(spec);
+
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+        ft.add(R.id.tab4, new MyFragment4());
+        ft.commit();
 
         /*
         MyFragment frag= new MyFragment();

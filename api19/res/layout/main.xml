@@ -68,11 +68,12 @@
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:orientation="vertical">
-
-                    <fragment android:layout_width="match_parent"
+                    <!--
+                    <fragment androd:layout_width="match_parent"
                               android:layout_height="wrap_content"
                               android:name="com.example.api19.MyFragment4" android:id="@+id/fragment4"
                               tools:layout="@layout/main"/>
+                              -->
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>

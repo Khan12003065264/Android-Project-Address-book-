@@ -15,27 +15,13 @@ import java.util.ArrayList;
  * Created by Fahad Khan on 8/1/2015.
  */
 
-class contactAdapterData
-{
-    int image;
-    String contactName;
-    String contactNumber;
-
-    contactAdapterData(int imageN, String nameN, String numN)
-    {
-        image= imageN;
-        contactName= nameN;
-        contactNumber= numN;
-    }
-}
-
 public class customAdapter extends BaseAdapter {
 
-    ArrayList<contactAdapterData> myList;
+    ArrayList<ContactInfo> myList;
     Context myContext;
     customAdapter(Context myContext)
     {
-        myList=new ArrayList<contactAdapterData>();
+        myList=new ArrayList<ContactInfo>();
         this.myContext= myContext;
 
         Resources res= myContext.getResources();
@@ -44,7 +30,7 @@ public class customAdapter extends BaseAdapter {
         int[] images= {R.drawable.ic_launcher};
 
         for (int i=0; i<3; i++)
-            myList.add(new contactAdapterData(images[0], names[i], number[i]));
+            myList.add(new ContactInfo(images[0], names[i], number[i]));
     }
 
     @Override
@@ -74,11 +60,15 @@ public class customAdapter extends BaseAdapter {
         TextView name= (TextView) myRow.findViewById(R.id.textView2);
         TextView number= (TextView) myRow.findViewById(R.id.textView3);
 
-        contactAdapterData rowData= myList.get(pos);
+        ContactInfo rowData= myList.get(pos);
         image.setImageResource(rowData.image);
         name.setText(rowData.contactName);
         number.setText(rowData.contactNumber);
 
         return  myRow;
+    }
+    public void addContact(int pos, int image, String newName, String number)
+    {
+        myList.add(new ContactInfo(image,newName,number));
     }
 }

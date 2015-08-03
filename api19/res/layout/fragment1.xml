@@ -3,9 +3,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/myPic">
+
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/editText"
-            android:text="fahad" android:layout_alignParentTop="true" android:layout_alignParentStart="true"/>
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/editText" android:layout_alignParentTop="true" android:layout_alignParentStart="true"/>
+
+    <!--
+    android:inputType="phone"
+     android:windowSoftInputMode="stateAlwaysVisible"
+    android:digits="1234567890"
+    android:text="fahad" android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+
+    -->
 </RelativeLayout>

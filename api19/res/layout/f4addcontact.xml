@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Name:"
+            android:id="@+id/textView4" android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+            android:layout_marginStart="51dp" android:layout_marginTop="124dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Contact:"
+            android:id="@+id/textView5"
+            android:layout_marginLeft="39dp" android:layout_below="@+id/textView4"
+            android:layout_marginTop="41dp"
+            android:layout_alignParentStart="true"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText2" android:layout_above="@+id/textView5" android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/textView5"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText3" android:layout_alignBottom="@+id/textView5"
+            android:layout_alignParentEnd="true" android:layout_alignStart="@+id/editText2"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/button3" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+</RelativeLayout>
